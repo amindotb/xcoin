@@ -1,8 +1,6 @@
-
-import { PORT } from "./config";
+import { APP_PORT } from "./config";
 import app from "./api";
 
-
-app.listen(PORT, () =>
-  console.log(`✅  Ready on port http://localhost:${PORT}`)
+app.listen(APP_PORT, () =>
+  console.log(`✅ Ready on port http://localhost:${APP_PORT}`)
 );
