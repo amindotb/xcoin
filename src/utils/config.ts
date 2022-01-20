@@ -13,6 +13,7 @@ function checkEnv(envVar: string, defaultValue?: string) {
   }
 };
 
+export const NODE_ENV: string = checkEnv("NODE_ENV");
 export const APP_PORT: number = parseInt(checkEnv("APP_PORT", '1000'));
 export const MONGO_URI: string = checkEnv("MONGO_URI");
 export const CORS_ORIGINS: string[] = checkEnv('CORS_ORIGINS', "http://localhost:1000").split(',');

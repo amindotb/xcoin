@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { Profile } from "../models/Profile";
+import logger from "../utils/logger";
 
 export default {
   async all(req: Request, res: Response): Promise<Response> {
@@ -17,8 +18,9 @@ export default {
         .select('-__v')
         .lean();
       
-        return res.onSuccess(data);
+      return res.onSuccess(data);
     } catch (err) {
+      logger.error(err);
       return res.onServerError();
     }
   },
@@ -32,6 +34,7 @@ export default {
       
       return data ? res.onSuccess(data) : res.onNotFound();
     } catch (err) {
+      logger.error(err);
       return res.onServerError();
     }
   },
@@ -54,6 +57,7 @@ export default {
 
       return res.onSuccess(data);
     } catch (err) {
+      logger.error(err);
       return res.onServerError();
     }
   },

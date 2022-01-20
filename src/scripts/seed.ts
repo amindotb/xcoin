@@ -6,9 +6,10 @@ import {
   IProfile,
   ISimulator,
 } from '../types'
+import logger from "../utils/logger";
 
 (async () => {
-  console.log('> Seeding Started');
+  logger.info('> Seeding Started');
 
   const profileData: IProfile = {
     name: `String`,
@@ -44,5 +45,5 @@ import {
     favorite.save(),
   ]);
 
-  console.log('> Seeding Finished');
+  logger.info('> Seeding Finished');
 })();
