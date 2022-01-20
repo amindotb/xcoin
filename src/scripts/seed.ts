@@ -16,7 +16,7 @@ import {
     email: `String`,
     capital: 123,
     divisa: `String`,
-    preferred_cryptocurrency: `String`,
+    preferredCryptocurrency: `String`,
   };
   const profile = new Profile(profileData);
   await profile.save();

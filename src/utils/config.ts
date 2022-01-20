@@ -15,7 +15,7 @@ function checkEnv(envVar: string, defaultValue?: string) {
 
 export const APP_PORT: number = parseInt(checkEnv("APP_PORT", '1000'));
 export const MONGO_URI: string = checkEnv("MONGO_URI");
-export const CORS_ORIGINS: string[] = checkEnv('CORS_ORIGINS', "http://localhost:1000").split(',')
+export const CORS_ORIGINS: string[] = checkEnv('CORS_ORIGINS', "http://localhost:1000").split(',');
 
 // We could get these options from env if we care about that should be dynamic
 export const MONGO_OPTIONS: any = {
@@ -25,4 +25,7 @@ export const MONGO_OPTIONS: any = {
   useCreateIndex: true,
   useFindAndModify: false,
   replicaSet: 'rs0',
-}
+};
+export const FETCH_LIMIT = '50';
+export const FETCH_SORT = 'createdAt';
+export const FETCH_ORDER = '-1';

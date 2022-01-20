@@ -1,18 +1,18 @@
 import express from "express";
-import { CORS_ORIGINS } from "./config";
+import { CORS_ORIGINS } from "./utils/config";
 import cors from "cors";
 import bodyParser from "body-parser";
-import { router as favoriteRouter } from "./routes/favorite.router";
-import { router as profileRouter } from "./routes/profile.router";
-import { router as simulatorRouter } from "./routes/simulator.router";
+import routes from "./routes";
+import catchMiddleware from "./middleware/catch.middleware";
+import responseModel from "./middleware/response.middleware";
 
 const app = express();
 
+app.use(responseModel);
 app.use(cors({ origin: CORS_ORIGINS }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(favoriteRouter);
-app.use(profileRouter);
-app.use(simulatorRouter);
+app.use('/api', routes);
+app.use(catchMiddleware);
 
 export default app;

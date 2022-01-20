@@ -1,4 +1,4 @@
-import { APP_PORT } from "./config";
+import { APP_PORT } from "./utils/config";
 import app from "./api";
 
 app.listen(APP_PORT, () =>

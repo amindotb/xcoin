@@ -8,27 +8,27 @@ const schema = new Schema(
       type: String,
       required: true,
     },
-    // nickname: {
-    //   type: String,
-    //   required: true,
-    // },
-    // email: {
-    //   type: String,
-    //   required: true,
-    // },
-    // capital: {
-    //   type: Number,
-    //   required: true,
-    // },
-    // divisa: {
-    //   type: String,
-    //   required: true,
+    nickname: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    capital: {
+      type: Number,
+      required: true,
+    },
+    divisa: {
+      type: String,
+      required: true,
 
-    // },
-    // preferred_cryptocurrency: {
-    //   type: String,
-    //   required: true,
-    // },
+    },
+    preferredCryptocurrency: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
