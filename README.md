@@ -14,7 +14,7 @@ List of changes and improvements.
 - Refactor seed script
 - Define types for each model in `./types`
 - Set project hierarchy like bulletproof Node.js architecture
-- Move `/api` from every route to entry point. Also it's best practice to change `/api` to `/v`. The api endpoint versioning and prevent redundant url segment.
+- Move `/api` from every route to entry point. Also it's best practice to change `/api` to `/v1`. The api endpoint versioning and prevent redundant url segment.
 - Reformat API routers base on API best practices like: `/profile` to `/profiles` or  `/favorites/:profileId` to `/favorites/profile/:profileId`
 - Install joi to validate user inputs
 - Set a error catcher middleware
